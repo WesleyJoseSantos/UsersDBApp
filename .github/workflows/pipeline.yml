@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "RELEASE_KIND=pre-release" >> $GITHUB_ENV
           echo "TAG_KIND=-pre" >> $GITHUB_ENV
-          echo "ARQUIVE_DIR=./KeyToInoApp/bin/Release" >> $GITHUB_ENV
+          echo "ARQUIVE_DIR=./UsersDBApp/bin/Release" >> $GITHUB_ENV
           echo "ARQUIVE_NAME=pre-release.zip" >> $GITHUB_ENV
 
 
@@ -30,7 +30,7 @@ jobs:
         run: |
           echo "RELEASE_KIND=release" >> $GITHUB_ENV
           echo "TAG_KIND=" >> $GITHUB_ENV
-          echo "ARQUIVE_DIR=./KeyToInoApp/bin/Release" >> $GITHUB_ENV
+          echo "ARQUIVE_DIR=./UsersDBApp/bin/Release" >> $GITHUB_ENV
           echo "ARQUIVE_NAME=release.zip" >> $GITHUB_ENV
 
       - name: Archive build
