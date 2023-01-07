@@ -17,7 +17,7 @@ Conteúdo
 Instalação
 ----------
 
-Para criar e configurar o banco de dados da aplicação foi usado a versão de desenvolvedor do softoware [Microsoft SQL Server Management Studio 18][microsof-sql-server-management-studio-18].
+Para criar e configurar o banco de dados da aplicação foi usado a versão de desenvolvedor do software [Microsoft SQL Server Management Studio 18][microsof-sql-server-management-studio-18].
 
 [microsof-sql-server-management-studio-18]: https://www.microsoft.com/pt-br/sql-server/sql-server-downloads
 
