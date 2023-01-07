@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45D84EEB-17BE-43AF-8F3F-A110D4993EAC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UsersDBApi</RootNamespace>
+    <AssemblyName>UsersDBApi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\DTOs\UserCredentialsDTO.cs" />
+    <Compile Include="Domain\Errors\EmailAlreadyExists.cs" />
+    <Compile Include="Domain\Errors\DatabaseEmptyError.cs" />
+    <Compile Include="Domain\Errors\InsuficientPrivilegesError.cs" />
+    <Compile Include="Domain\Errors\NameNotFound.cs" />
+    <Compile Include="Domain\Errors\IdNotFound.cs" />
+    <Compile Include="Domain\Errors\IncorrectPasswordError.cs" />
+    <Compile Include="Domain\Errors\IBaseError.cs" />
+    <Compile Include="Domain\Errors\InvalidEmailError.cs" />
+    <Compile Include="Domain\Errors\InvalidNameError.cs" />
+    <Compile Include="Domain\Errors\InvalidPassword.cs" />
+    <Compile Include="Domain\Errors\EmailNotFoundError.cs" />
+    <Compile Include="Domain\Errors\InvalidPhoneNumber.cs" />
+    <Compile Include="Domain\Errors\NoError.cs" />
+    <Compile Include="Domain\Errors\DatabaseExceptionError.cs" />
+    <Compile Include="Domain\DTOs\UserDTO.cs" />
+    <Compile Include="Domain\Errors\NameAlreadyExists.cs" />
+    <Compile Include="Domain\Modules\Users\IUsersModule.cs" />
+    <Compile Include="Domain\Repositories\IUsersRepository.cs" />
+    <Compile Include="Domain\Usecases\Users\IGenerateReport.cs" />
+    <Compile Include="Domain\Usecases\Users\IGetUserByEmail.cs" />
+    <Compile Include="Domain\Usecases\Users\IGetUserById.cs" />
+    <Compile Include="Domain\Usecases\Users\IGetUsersByName.cs" />
+    <Compile Include="Domain\Usecases\Users\IGetAllUsers.cs" />
+    <Compile Include="Domain\Usecases\Users\ICreateUser.cs" />
+    <Compile Include="Domain\Usecases\Users\ISignIn.cs" />
+    <Compile Include="Infra\Database\Connection.cs" />
+    <Compile Include="Infra\Database\Models\UserModel.cs" />
+    <Compile Include="Infra\Modules\Users\UsersModule.cs" />
+    <Compile Include="Infra\Repositories\UsersRepository.cs" />
+    <Compile Include="Infra\Usecases\Users\CreateUser.cs" />
+    <Compile Include="Infra\Usecases\Users\GenerateReport.cs" />
+    <Compile Include="Infra\Usecases\Users\GetAllUsers.cs" />
+    <Compile Include="Infra\Usecases\Users\GetUserByEmail.cs" />
+    <Compile Include="Infra\Usecases\Users\GetUserById.cs" />
+    <Compile Include="Infra\Usecases\Users\GetUserByName.cs" />
+    <Compile Include="Infra\Usecases\Users\SignIn.cs" />
+    <Compile Include="Lib\Either.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
