@@ -40,7 +40,9 @@ Importando arquivo do Banco de Dados
 
 ![import_file](images/import_file.png)
 
-4 - Clicar em "Próxima >", procurar e selecionar o arquivo "users.csv".
+4 - Clicar em "Próxima >", procurar e selecionar o arquivo [users.csv][users-csv].
+
+[users-csv]: https://github.com/WesleyJoseSantos/UsersDBApp/tree/main/UsersDBApp/bin/Release/users.csv
 
 ![select_users_csv](images/select_users_csv.png)
 
