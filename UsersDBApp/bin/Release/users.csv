@@ -1,0 +1,4 @@
+Id,Name,Email,Phone,Level,Password,CreatedAt,UpdatedAt,DeletedAt
+0,Administrator,admin@outlook.com.br,3798547896,2,adminadmin,06/01/2023 15:44:38,,
+1,Bruno Soares Santos,bruno@gmail.com,3788546987,0,password,06/01/2023 15:37:30,,
+2,Alexandre da Silva,alexandre@outlook.com.br,3732144331,1,passsalexandre,06/01/2023 16:30:30,,
