@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace UsersDBApi.Domain.Errors
 {
-    public class EmailAlreadyExists : IBaseError
+    public class InvalidPasswordError : IBaseError
     {
-        public int ErrorCode => 0x6001;
+        public int ErrorCode => 0x7003;
 
         public string Title => "Erro";
 
-        public string Message => $"O email informado já existe na base de dados! (0x{ErrorCode.ToString("X4")})";
+        public string Message => $"A senha informada é inválida! (0x{ErrorCode.ToString("X4")})";
     }
 }
