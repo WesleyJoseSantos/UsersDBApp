@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UsersDBApi.Domain.Errors
 {
-    public class NameAlreadyExists : IBaseError
+    public class NameAlreadyExistsError : IBaseError
     {
         public int ErrorCode => 0x6000;
 

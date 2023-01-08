@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UsersDBApi.Domain.Errors
 {
-    public class InvalidPhoneNumber : IBaseError
+    public class InvalidPhoneNumberError : IBaseError
     {
         public int ErrorCode => 0x7002;
 
