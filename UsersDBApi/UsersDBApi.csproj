@@ -51,23 +51,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Database\IConnection.cs" />
     <Compile Include="Domain\DTOs\UserCredentialsDTO.cs" />
-    <Compile Include="Domain\Errors\EmailAlreadyExists.cs" />
+    <Compile Include="Domain\Errors\EmailAlreadyExistsError.cs" />
     <Compile Include="Domain\Errors\DatabaseEmptyError.cs" />
     <Compile Include="Domain\Errors\InsuficientPrivilegesError.cs" />
-    <Compile Include="Domain\Errors\NameNotFound.cs" />
-    <Compile Include="Domain\Errors\IdNotFound.cs" />
+    <Compile Include="Domain\Errors\NameNotFoundError.cs" />
+    <Compile Include="Domain\Errors\IdNotFoundError.cs" />
     <Compile Include="Domain\Errors\IncorrectPasswordError.cs" />
     <Compile Include="Domain\Errors\IBaseError.cs" />
     <Compile Include="Domain\Errors\InvalidEmailError.cs" />
     <Compile Include="Domain\Errors\InvalidNameError.cs" />
-    <Compile Include="Domain\Errors\InvalidPassword.cs" />
+    <Compile Include="Domain\Errors\InvalidPasswordError.cs" />
     <Compile Include="Domain\Errors\EmailNotFoundError.cs" />
-    <Compile Include="Domain\Errors\InvalidPhoneNumber.cs" />
+    <Compile Include="Domain\Errors\InvalidPhoneNumberError.cs" />
     <Compile Include="Domain\Errors\NoError.cs" />
     <Compile Include="Domain\Errors\DatabaseExceptionError.cs" />
     <Compile Include="Domain\DTOs\UserDTO.cs" />
-    <Compile Include="Domain\Errors\NameAlreadyExists.cs" />
+    <Compile Include="Domain\Errors\NameAlreadyExistsError.cs" />
     <Compile Include="Domain\Modules\Users\IUsersModule.cs" />
     <Compile Include="Domain\Repositories\IUsersRepository.cs" />
     <Compile Include="Domain\Usecases\Users\IGenerateReport.cs" />

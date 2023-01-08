@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
+using UsersDBApi.Domain.Database;
 using UsersDBApi.Domain.DTOs;
 using UsersDBApi.Domain.Modules.Users;
 using UsersDBApi.Domain.repositories;
 using UsersDBApi.Domain.Usecases.Users;
+using UsersDBApi.Infra.Database;
 using UsersDBApi.Infra.Modules.Users;
 using UsersDBApi.Infra.Repositories;
 using UsersDBApi.Infra.Usecases.Users;
@@ -12,7 +14,9 @@ namespace UsersDBApp
 {
     internal static class Program
     {
-        private static readonly IUsersRepository repository = new UsersRepository();
+        private static readonly IConnection connection = new Connection();
+
+        private static readonly IUsersRepository repository = new UsersRepository(connection);
 
         private static readonly ICreateUser createUser = new CreateUser(repository);
         private static readonly IGetAllUsers getAllUsers = new GetAllUsers(repository);
