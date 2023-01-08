@@ -38,12 +38,12 @@ namespace UsersDBApi.Infra.Usecases.Users
             var phoneRegex = new Regex("^\\+?[1-9][0-9]{7,14}$");
             if (user.Phone == null || !phoneRegex.IsMatch(user.Phone)) 
             {
-                return new InvalidPhoneNumber();
+                return new InvalidPhoneNumberError();
             }
 
             if(user.Password == null || user.Password.Length < 8) 
             {
-                return new InvalidPassword();
+                return new InvalidPasswordError();
             }
 
             try
