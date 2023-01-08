@@ -12,9 +12,9 @@ namespace UsersDBApi.Domain.DTOs
 
         public string Password { get; set;}
 
-        public UserCredentialsDTO(string userName, string password)
+        public UserCredentialsDTO(string email, string password)
         {
-            Email = userName;
+            Email = email;
             Password = password;
         }
     }
