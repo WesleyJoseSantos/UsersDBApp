@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data.SqlClient;
-using System.Security.Cryptography.X509Certificates;
-using System.Data.Common;
+using UsersDBApi.Domain.Database;
+using System.Data;
 
 namespace UsersDBApi.Infra.Database
 {
-    public class Connection
+    public class Connection : IConnection
     {
-        static public DbConnection Get(string name)
+        public IDbConnection Get(string name)
         {
             string connectionString = ConfigurationManager.ConnectionStrings[name].ConnectionString;
             return new SqlConnection(connectionString);
